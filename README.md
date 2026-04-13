@@ -40,7 +40,7 @@ npm run test
 
 5. Open in browser
 
-- http://localhost:5000/home.html
+- http://localhost:5000/
 
 ## Notes
 
