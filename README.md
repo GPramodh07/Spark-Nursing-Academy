@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Spark-Nursing-Academy
-Spark Nurses Academy - Comprehensive online educational platform for nursing students preparing for government exams with interactive courses and study materials.
-=======
 # Spark Nurses Academy (Prototype)
 
 This is a prototype project for a nursing exam preparation platform.
@@ -44,7 +40,7 @@ npm run test
 
 5. Open in browser
 
-- http://localhost:5000/pages/home/home.html
+- http://localhost:5000/home.html
 
 ## Notes
 
