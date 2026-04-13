@@ -1,0 +1,520 @@
+/* ============================================
+   Spark Nurses Academy – Registration Page
+   Mirrors login.css design language
+   ============================================ */
+
+:root {
+    --clr-primary: #42b8b5;
+    --clr-primary-dark: #349694;
+    --clr-primary-light: #5ac5c2;
+    --clr-accent: #c64744;
+    --clr-accent-dark: #a53b39;
+    --clr-accent-light: #d46664;
+    --clr-bg: #E9F7F6;
+    --clr-card: #FFFFFF;
+    --clr-text: #2C3E50;
+    --clr-text-light: #6B7C93;
+    --clr-border: #D0E3E2;
+    --clr-input-bg: #F5FAFA;
+    --clr-input-focus: #42b8b5;
+    --clr-error: #E74C3C;
+    --clr-success: #27AE60;
+    --shadow-sm: 0 2px 8px rgba(66, 184, 181, .10);
+    --shadow-md: 0 8px 32px rgba(66, 184, 181, .15);
+    --shadow-lg: 0 16px 48px rgba(66, 184, 181, .18);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --transition: .25s cubic-bezier(.4, 0, .2, 1);
+    --font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--clr-text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #E8F6F5 0%, #D4EEEC 30%, #EAF0F5 60%, #F0E8EC 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ---------- Container ---------- */
+.reg-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* ---------- Card ---------- */
+.reg-card {
+    background: var(--clr-card);
+    border-radius: var(--radius-lg);
+    padding: 36px 28px 32px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+    animation: cardSlideUp .6s var(--transition) both;
+}
+
+.reg-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent), var(--clr-primary-light));
+    background-size: 200% 100%;
+    animation: gradientBar 4s ease infinite;
+}
+
+@keyframes cardSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientBar {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ---------- Logo Section ---------- */
+.logo-section {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.logo-section img {
+    width: 140px;
+    height: auto;
+    display: inline-block;
+    transition: transform var(--transition);
+}
+
+.logo-section img:hover {
+    transform: scale(1.03);
+}
+
+.logo-section .brand-name {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--clr-primary-dark);
+    margin-top: 8px;
+    letter-spacing: -0.02em;
+}
+
+.logo-section .brand-tagline {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--clr-text-light);
+    margin-top: 2px;
+    letter-spacing: 0.03em;
+}
+
+/* ---------- Divider ---------- */
+.divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+    border: none;
+    border-radius: 4px;
+    margin: 16px auto 22px;
+}
+
+/* ---------- Form Heading ---------- */
+.form-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-heading h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 4px;
+}
+
+.form-heading p {
+    font-size: 0.85rem;
+    color: var(--clr-text-light);
+}
+
+/* ---------- Two-Column Row (tablet+) ---------- */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ---------- Form Groups ---------- */
+.form-group {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--clr-text);
+    margin-bottom: 5px;
+    letter-spacing: 0.02em;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper .input-icon {
+    position: absolute;
+    left: 13px;
+    width: 17px;
+    height: 17px;
+    color: var(--clr-text-light);
+    pointer-events: none;
+    transition: color var(--transition);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 11px 14px 11px 40px;
+    font-size: 0.92rem;
+    font-family: var(--font-family);
+    color: var(--clr-text);
+    background: var(--clr-input-bg);
+    border: 1.5px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.form-group input::placeholder {
+    color: #A9BCC0;
+    font-weight: 400;
+}
+
+/* Focus */
+.form-group input:focus {
+    border-color: var(--clr-input-focus);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(66, 184, 181, .15);
+}
+
+.form-group input:focus~.input-icon,
+.form-group input:focus+.input-icon {
+    color: var(--clr-primary);
+}
+
+/* Error */
+.form-group.error input {
+    border-color: var(--clr-error);
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, .12);
+}
+
+.form-group .error-message {
+    display: none;
+    font-size: 0.73rem;
+    color: var(--clr-error);
+    margin-top: 4px;
+    padding-left: 2px;
+    animation: shakeX .35s ease;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+@keyframes shakeX {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-6px);
+    }
+
+    40% {
+        transform: translateX(5px);
+    }
+
+    60% {
+        transform: translateX(-4px);
+    }
+
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+/* ---------- Password Toggle ---------- */
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: var(--clr-text-light);
+    transition: color var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-toggle:hover {
+    color: var(--clr-primary);
+}
+
+.password-toggle svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* ---------- Register Button ---------- */
+.btn-register {
+    width: 100%;
+    padding: 13px;
+    margin-top: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    color: #fff;
+    background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+    letter-spacing: 0.02em;
+}
+
+.btn-register::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .15), transparent);
+    transition: left .5s ease;
+}
+
+.btn-register:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(66, 184, 181, .35);
+}
+
+.btn-register:hover::before {
+    left: 100%;
+}
+
+.btn-register:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(66, 184, 181, .25);
+}
+
+.btn-register:focus-visible {
+    outline: 2px solid var(--clr-primary);
+    outline-offset: 2px;
+}
+
+/* ---------- Login Link ---------- */
+.login-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.86rem;
+    color: var(--clr-text-light);
+}
+
+.login-text a {
+    color: var(--clr-accent);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--transition);
+    position: relative;
+}
+
+.login-text a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--clr-accent-dark);
+    transition: width var(--transition);
+}
+
+.login-text a:hover {
+    color: var(--clr-accent-dark);
+}
+
+.login-text a:hover::after {
+    width: 100%;
+}
+
+/* ---------- Server Error ---------- */
+.server-error {
+    display: none;
+    background: #FFF0EE;
+    border: 1px solid rgba(231, 76, 60, .2);
+    color: var(--clr-error);
+    font-size: 0.8rem;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.server-error.visible {
+    display: block;
+    animation: shakeX .35s ease;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+/* Small phones (≤ 380px) */
+@media (max-width: 380px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    .reg-card {
+        padding: 24px 18px 22px;
+        border-radius: var(--radius-md);
+    }
+
+    .logo-section img {
+        width: 110px;
+    }
+
+    .logo-section .brand-name {
+        font-size: 1.1rem;
+    }
+
+    .form-heading h1 {
+        font-size: 1.15rem;
+    }
+
+    .form-group {
+        margin-bottom: 14px;
+    }
+}
+
+/* Tablets (≥ 600px) — enable two-column rows */
+@media (min-width: 600px) {
+    .reg-container {
+        max-width: 520px;
+    }
+
+    .reg-card {
+        padding: 42px 36px 38px;
+    }
+
+    .form-row {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .form-row .form-group {
+        flex: 1;
+    }
+
+    .logo-section img {
+        width: 160px;
+    }
+
+    .form-heading h1 {
+        font-size: 1.45rem;
+    }
+}
+
+/* Desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+    body {
+        background-attachment: fixed;
+    }
+
+    .reg-container {
+        max-width: 540px;
+    }
+
+    .reg-card {
+        padding: 48px 44px 42px;
+        box-shadow: var(--shadow-lg), 0 0 80px rgba(66, 184, 181, .06);
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

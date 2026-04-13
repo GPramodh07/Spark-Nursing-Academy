@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Login to Spark Nurses Academy — your professional healthcare training platform." />
+    <title>Login | Spark Nurses Academy</title>
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../../css/start/login.css" />
+</head>
+
+<body>
+
+    <main class="login-container" role="main">
+        <section class="login-card" aria-label="Login form">
+
+            <!-- ====== Logo Section ====== -->
+            <div class="logo-section">
+                <img src="../../images/logo1_X-Design.png" alt="Spark Nurses Academy Logo" width="160" height="auto" />
+                <span class="brand-name">Spark Nurses Academy</span>
+                <span class="brand-tagline">Professional Healthcare Training</span>
+            </div>
+
+            <!-- ====== Decorative Divider ====== -->
+            <hr class="divider" aria-hidden="true" />
+
+            <!-- ====== Form Heading ====== -->
+            <div class="form-heading">
+                <h1>Welcome Back</h1>
+                <p>Sign in to continue your learning</p>
+            </div>
+
+            <!-- ====== Server Error (hidden by default) ====== -->
+            <div class="server-error" id="serverError" role="alert" aria-live="polite"></div>
+
+            <!-- ====== Login Form ====== -->
+            <form id="loginForm" novalidate autocomplete="on">
+
+                <!-- Username Field -->
+                <div class="form-group" id="usernameGroup">
+                    <label for="username">Username</label>
+                    <div class="input-wrapper">
+                        <!-- User Icon (inline SVG for zero dependencies) -->
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                        <input type="text" id="username" name="username" placeholder="Enter your username"
+                            autocomplete="username" required aria-required="true" />
+                    </div>
+                    <span class="error-message" id="usernameError">Please enter your username</span>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group" id="passwordGroup">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <!-- Lock Icon -->
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                        <input type="password" id="password" name="password" placeholder="Enter your password"
+                            autocomplete="current-password" required aria-required="true" />
+                        <!-- Show/Hide Password Toggle -->
+                        <button type="button" class="password-toggle" id="passwordToggle"
+                            aria-label="Toggle password visibility" tabindex="0">
+                            <!-- Eye Icon (Visible) -->
+                            <svg id="eyeOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                            <!-- Eye-Off Icon (Hidden by default) -->
+                            <svg id="eyeClosed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="display:none;">
+                                <path
+                                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" />
+                                <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" />
+                                <path d="M14.12 14.12a3 3 0 1 1-4.24-4.24" />
+                                <line x1="1" y1="1" x2="23" y2="23" />
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="error-message" id="passwordError">Please enter your password</span>
+                </div>
+
+                <!-- Form Options -->
+                <div class="form-options">
+                    <a href="#" class="forgot-link" id="forgotPassword">Forgot Password?</a>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="btn-login" id="loginBtn">Sign In</button>
+            </form>
+
+            <!-- ====== Sign Up Link ====== -->
+            <p class="signup-text">
+                Don't have an account? <a href="reg.html" id="signupLink">Sign up</a>
+            </p>
+
+        </section>
+    </main>
+
+    <!-- ====== JavaScript (external) ====== -->
+    <script src="../../js/start/login.js"></script>
+
+</body>
+
+</html>

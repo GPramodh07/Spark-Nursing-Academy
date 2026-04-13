@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Verify your phone number for Spark Nurses Academy — professional healthcare training platform." />
+    <title>Phone Verification | Spark Nurses Academy</title>
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../../css/start/otp_page.css" />
+</head>
+
+<body>
+
+    <main class="otp-container" role="main">
+        <section class="otp-card" aria-label="Phone verification">
+
+            <!-- ====== Form Heading ====== -->
+            <div class="form-heading">
+                <h1>Phone Verification</h1>
+                <p>An OTP will be sent to this phone number via SMS.</p>
+            </div>
+
+            <!-- ====== Phone Number Display ====== -->
+            <div class="phone-display" id="phoneDisplay">
+                <span class="phone-label">OTP will be sent to:</span>
+                <span class="phone-number" id="phoneNumber">+91 9876543210</span>
+            </div>
+
+            <!-- ====== Server / Status Messages ====== -->
+            <div class="status-message" id="statusMessage" role="alert" aria-live="polite"></div>
+
+            <!-- ====== OTP Input Section ====== -->
+            <div class="otp-section" id="otpSection">
+
+                <!-- 6-Digit OTP Input Boxes -->
+                <div class="otp-inputs" id="otpInputs" aria-label="Enter 6-digit OTP">
+                    <input type="text" class="otp-digit" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                        aria-label="Digit 1" autocomplete="one-time-code" />
+                    <input type="text" class="otp-digit" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                        aria-label="Digit 2" />
+                    <input type="text" class="otp-digit" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                        aria-label="Digit 3" />
+                    <input type="text" class="otp-digit" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                        aria-label="Digit 4" />
+                    <input type="text" class="otp-digit" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                        aria-label="Digit 5" />
+                    <input type="text" class="otp-digit" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                        aria-label="Digit 6" />
+                </div>
+
+                <!-- OTP Error -->
+                <span class="error-message" id="otpError">Please enter a valid 6-digit OTP</span>
+
+                <!-- Verify Button -->
+                <button type="button" class="btn-verify" id="verifyBtn">Verify OTP</button>
+
+                <!-- Resend OTP Link -->
+                <p class="resend-text">
+                    Didn't receive the code?
+                    <a href="#" id="resendOtp" class="resend-link">Resend OTP</a>
+                </p>
+            </div>
+
+            <!-- ====== Wrong Number / Update Phone Section ====== -->
+            <div class="wrong-number-section" id="wrongNumberSection">
+                <a href="#" class="wrong-number-link" id="wrongNumberLink">
+                    <!-- Edit Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                    </svg>
+                    Wrong number? Re-enter phone number
+                </a>
+            </div>
+
+            <!-- ====== Phone Update Section (hidden by default) ====== -->
+            <div class="phone-update-section hidden" id="phoneUpdateSection">
+                <h2 class="update-heading">Update Phone Number</h2>
+                <p class="update-subtext">Enter your correct phone number below.</p>
+
+                <div class="form-group" id="newPhoneGroup">
+                    <label for="newPhone">New Phone Number</label>
+                    <div class="input-wrapper">
+                        <!-- Phone Icon -->
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <input type="tel" id="newPhone" name="newPhone" placeholder="e.g. 9876543210"
+                            autocomplete="tel" required aria-required="true" />
+                    </div>
+                    <span class="error-message" id="newPhoneError">Please enter a valid phone number (7–15 digits)</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="update-actions">
+                    <button type="button" class="btn-update" id="updatePhoneBtn">Update Number</button>
+                    <button type="button" class="btn-cancel" id="cancelUpdateBtn">Cancel</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ====== JavaScript (external) ====== -->
+    <script src="../../js/start/otp_page.js"></script>
+
+</body>
+
+</html>

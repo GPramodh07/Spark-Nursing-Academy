@@ -1,0 +1,675 @@
+/* ============================================
+   Spark Nurses Academy – OTP Verification Page
+   Mirrors login.css / reg.css design language
+   ============================================ */
+
+:root {
+    --clr-primary: #42b8b5;
+    --clr-primary-dark: #349694;
+    --clr-primary-light: #5ac5c2;
+    --clr-accent: #c64744;
+    --clr-accent-dark: #a53b39;
+    --clr-accent-light: #d46664;
+    --clr-bg: #E9F7F6;
+    --clr-card: #FFFFFF;
+    --clr-text: #2C3E50;
+    --clr-text-light: #6B7C93;
+    --clr-border: #D0E3E2;
+    --clr-input-bg: #F5FAFA;
+    --clr-input-focus: #42b8b5;
+    --clr-error: #E74C3C;
+    --clr-success: #27AE60;
+    --shadow-sm: 0 2px 8px rgba(66, 184, 181, .10);
+    --shadow-md: 0 8px 32px rgba(66, 184, 181, .15);
+    --shadow-lg: 0 16px 48px rgba(66, 184, 181, .18);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --transition: .25s cubic-bezier(.4, 0, .2, 1);
+    --font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--clr-text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #E8F6F5 0%, #D4EEEC 30%, #EAF0F5 60%, #F0E8EC 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ---------- Container ---------- */
+.otp-container {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+/* ---------- Card ---------- */
+.otp-card {
+    background: var(--clr-card);
+    border-radius: var(--radius-lg);
+    padding: 36px 28px 32px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+    animation: cardSlideUp .6s var(--transition) both;
+}
+
+
+
+@keyframes cardSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* ---------- Form Heading ---------- */
+.form-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-heading h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 4px;
+}
+
+.form-heading p {
+    font-size: 0.85rem;
+    color: var(--clr-text-light);
+}
+
+/* ---------- Phone Number Display ---------- */
+.phone-display {
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 14px 18px;
+    background: var(--clr-input-bg);
+    border: 1.5px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+}
+
+.phone-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--clr-text-light);
+    margin-bottom: 4px;
+}
+
+.phone-number {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--clr-primary-dark);
+    letter-spacing: 0.05em;
+}
+
+/* ---------- Status / Error Message ---------- */
+.status-message {
+    display: none;
+    font-size: 0.82rem;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.status-message.error {
+    display: block;
+    background: #FFF0EE;
+    border: 1px solid rgba(231, 76, 60, .2);
+    color: var(--clr-error);
+    animation: shakeX .35s ease;
+}
+
+.status-message.success {
+    display: block;
+    background: #EAFAF1;
+    border: 1px solid rgba(39, 174, 96, .2);
+    color: var(--clr-success);
+}
+
+/* ---------- OTP Inputs Section ---------- */
+.otp-section {
+    text-align: center;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.otp-digit {
+    width: 48px;
+    height: 56px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: var(--font-family);
+    color: var(--clr-text);
+    background: var(--clr-input-bg);
+    border: 1.5px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    caret-color: var(--clr-primary);
+    transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.otp-digit::placeholder {
+    color: #C5D5D4;
+    font-weight: 400;
+}
+
+/* Focus state */
+.otp-digit:focus {
+    border-color: var(--clr-input-focus);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(66, 184, 181, .15);
+}
+
+/* Filled state */
+.otp-digit.filled {
+    border-color: var(--clr-primary);
+    background: #fff;
+}
+
+/* Error state */
+.otp-digit.error {
+    border-color: var(--clr-error);
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, .12);
+}
+
+/* ---------- OTP Error Message ---------- */
+.otp-section > .error-message {
+    display: none;
+    font-size: 0.75rem;
+    color: var(--clr-error);
+    margin-bottom: 12px;
+    animation: shakeX .35s ease;
+}
+
+.otp-section > .error-message.visible {
+    display: block;
+}
+
+@keyframes shakeX {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(3px); }
+}
+
+/* ---------- Verify Button ---------- */
+.btn-verify {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    color: #fff;
+    background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+    letter-spacing: 0.02em;
+}
+
+.btn-verify::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .15), transparent);
+    transition: left .5s ease;
+}
+
+.btn-verify:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(66, 184, 181, .35);
+}
+
+.btn-verify:hover::before {
+    left: 100%;
+}
+
+.btn-verify:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(66, 184, 181, .25);
+}
+
+.btn-verify:focus-visible {
+    outline: 2px solid var(--clr-primary);
+    outline-offset: 2px;
+}
+
+.btn-verify:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ---------- Resend OTP ---------- */
+.resend-text {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.84rem;
+    color: var(--clr-text-light);
+}
+
+.resend-link {
+    color: var(--clr-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--transition);
+    position: relative;
+}
+
+.resend-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--clr-primary-dark);
+    transition: width var(--transition);
+}
+
+.resend-link:hover {
+    color: var(--clr-primary-dark);
+}
+
+.resend-link:hover::after {
+    width: 100%;
+}
+
+.resend-link.disabled {
+    color: var(--clr-text-light);
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.resend-link.disabled::after {
+    display: none;
+}
+
+/* ---------- Wrong Number Section ---------- */
+.wrong-number-section {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.wrong-number-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--clr-accent);
+    text-decoration: none;
+    transition: color var(--transition);
+    position: relative;
+}
+
+.wrong-number-link svg {
+    width: 15px;
+    height: 15px;
+}
+
+.wrong-number-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--clr-accent-dark);
+    transition: width var(--transition);
+}
+
+.wrong-number-link:hover {
+    color: var(--clr-accent-dark);
+}
+
+.wrong-number-link:hover::after {
+    width: 100%;
+}
+
+/* ---------- Phone Update Section ---------- */
+.phone-update-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--clr-border);
+    animation: fadeSlideIn .3s ease both;
+}
+
+.phone-update-section.hidden {
+    display: none;
+}
+
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.update-heading {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.update-subtext {
+    font-size: 0.82rem;
+    color: var(--clr-text-light);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* ---------- Form Group (phone update) ---------- */
+.form-group {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--clr-text);
+    margin-bottom: 5px;
+    letter-spacing: 0.02em;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper .input-icon {
+    position: absolute;
+    left: 13px;
+    width: 17px;
+    height: 17px;
+    color: var(--clr-text-light);
+    pointer-events: none;
+    transition: color var(--transition);
+}
+
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 11px 14px 11px 40px;
+    font-size: 0.92rem;
+    font-family: var(--font-family);
+    color: var(--clr-text);
+    background: var(--clr-input-bg);
+    border: 1.5px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.form-group input::placeholder {
+    color: #A9BCC0;
+    font-weight: 400;
+}
+
+/* Focus */
+.form-group input:focus {
+    border-color: var(--clr-input-focus);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(66, 184, 181, .15);
+}
+
+.form-group input:focus ~ .input-icon,
+.form-group input:focus + .input-icon {
+    color: var(--clr-primary);
+}
+
+/* Error state */
+.form-group.error input {
+    border-color: var(--clr-error);
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, .12);
+}
+
+.form-group .error-message {
+    display: none;
+    font-size: 0.73rem;
+    color: var(--clr-error);
+    margin-top: 4px;
+    padding-left: 2px;
+    animation: shakeX .35s ease;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+/* ---------- Update Action Buttons ---------- */
+.update-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-update {
+    flex: 1;
+    padding: 12px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    color: #fff;
+    background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+    letter-spacing: 0.02em;
+}
+
+.btn-update::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .15), transparent);
+    transition: left .5s ease;
+}
+
+.btn-update:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(66, 184, 181, .35);
+}
+
+.btn-update:hover::before {
+    left: 100%;
+}
+
+.btn-update:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(66, 184, 181, .25);
+}
+
+.btn-update:focus-visible {
+    outline: 2px solid var(--clr-primary);
+    outline-offset: 2px;
+}
+
+.btn-cancel {
+    flex: 1;
+    padding: 12px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    color: var(--clr-text-light);
+    background: var(--clr-input-bg);
+    border: 1.5px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.btn-cancel:hover {
+    background: #E8F0EF;
+    color: var(--clr-text);
+    border-color: var(--clr-text-light);
+}
+
+.btn-cancel:focus-visible {
+    outline: 2px solid var(--clr-primary);
+    outline-offset: 2px;
+}
+
+/* ---------- Utility: Hidden ---------- */
+.hidden {
+    display: none !important;
+}
+
+/* ============================================
+   Responsive Breakpoints
+   ============================================ */
+
+/* Small Phones (≤ 380px) */
+@media (max-width: 380px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    .otp-card {
+        padding: 24px 18px 22px;
+        border-radius: var(--radius-md);
+    }
+
+    .form-heading h1 {
+        font-size: 1.15rem;
+    }
+
+    .otp-digit {
+        width: 40px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+
+    .otp-inputs {
+        gap: 6px;
+    }
+
+    .phone-number {
+        font-size: 1rem;
+    }
+
+    .update-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Tablets (≥ 600px) */
+@media (min-width: 600px) {
+    .otp-container {
+        max-width: 480px;
+    }
+
+    .otp-card {
+        padding: 42px 36px 38px;
+    }
+
+    .form-heading h1 {
+        font-size: 1.45rem;
+    }
+
+    .otp-digit {
+        width: 52px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .otp-inputs {
+        gap: 12px;
+    }
+
+    .phone-number {
+        font-size: 1.25rem;
+    }
+}
+
+/* Desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+    body {
+        background-attachment: fixed;
+    }
+
+    .otp-container {
+        max-width: 500px;
+    }
+
+    .otp-card {
+        padding: 48px 44px 42px;
+        box-shadow: var(--shadow-lg), 0 0 80px rgba(66, 184, 181, .06);
+    }
+
+    .otp-digit {
+        width: 54px;
+        height: 62px;
+        font-size: 1.55rem;
+    }
+
+    .otp-inputs {
+        gap: 14px;
+    }
+}
+
+/* ---------- Accessibility: Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

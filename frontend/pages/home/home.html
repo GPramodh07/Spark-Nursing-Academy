@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Spark Nurses Academy — Professional healthcare training, nursing exam preparation, study materials, and mock tests." />
+    <title>Spark Nurses Academy</title>
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../../css/home/home.css" />
+</head>
+
+<body>
+
+    <!-- ============================================================
+         TOP HEADER BAR
+         Logo | Spark Nurses Academy | Start Preparation · Login
+         ============================================================ -->
+    <header class="top-header" role="banner">
+        <div class="header-inner">
+
+            <!-- Left — Logo -->
+            <a href="home.html" class="header-logo" aria-label="Spark Nurses Academy Home">
+                <img src="../../images/logo1_X-Design.png" alt="Spark Nurses Academy Logo" />
+            </a>
+
+            <!-- Center — Brand Title -->
+            <div class="header-title">
+                <span class="title-main">Spark Nurses Academy</span>
+            </div>
+
+            <!-- Right — Action Links -->
+            <div class="header-actions">
+                <a href="../start/reg.html" class="action-link action-link--primary">Start Preparation</a>
+                <span class="action-divider" aria-hidden="true">|</span>
+                <a href="../start/login.html" class="action-link">Login</a>
+                <span class="action-divider" aria-hidden="true">|</span>
+                <!-- Theme Toggle -->
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"
+                    title="Toggle theme">
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu"
+                aria-expanded="false" aria-controls="mainNav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         MAIN NAVIGATION BAR
+         All Courses | Exams ▾ | Study Materials ▾ | Mock Tests ▾ | Previous Papers ▾
+         ============================================================ -->
+    <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+
+            <!-- All Courses (no dropdown) -->
+            <li class="nav-item">
+                <a href="#" class="nav-link">All Courses</a>
+            </li>
+
+            <!-- Exams (dropdown) -->
+            <li class="nav-item has-dropdown">
+                <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Exams
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li role="menuitem"><a href="#">Norcet</a></li>
+                    <li role="menuitem"><a href="#">RRB</a></li>
+                    <li role="menuitem"><a href="#">ESIC</a></li>
+                    <li role="menuitem"><a href="#">BSF</a></li>
+                    <li role="menuitem"><a href="#">MNS</a></li>
+                </ul>
+            </li>
+
+            <!-- Study Materials (dropdown) -->
+            <li class="nav-item has-dropdown">
+                <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Study Materials
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li role="menuitem"><a href="#">Notes</a></li>
+                    <li role="menuitem"><a href="#">PDF Materials</a></li>
+                </ul>
+            </li>
+
+            <!-- Mock Tests (dropdown) -->
+            <li class="nav-item has-dropdown">
+                <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Mock Tests
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li role="menuitem"><a href="#">Full Tests</a></li>
+                    <li role="menuitem"><a href="#">Topic Tests</a></li>
+                    <li role="menuitem"><a href="#">Practice Questions</a></li>
+                </ul>
+            </li>
+
+            <!-- Previous Papers (dropdown) -->
+            <li class="nav-item has-dropdown">
+                <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Previous Papers
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li role="menuitem"><a href="#">AIIMS</a></li>
+                    <li role="menuitem"><a href="#">ESIC</a></li>
+                    <li role="menuitem"><a href="#">Railway Nursing</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- ============================================================
+         HERO SECTION
+         Two-column: Text + CTA (left) | Image placeholder (right)
+         ============================================================ -->
+    <section class="hero" aria-label="Hero — Prepare for Government Nursing Exams">
+        <div class="hero-inner">
+
+            <!-- Left — Text Content -->
+            <div class="hero-content">
+                <h1 class="hero-heading">Prepare for Government<br>Nursing Exams</h1>
+                <p class="hero-exams">NORCET &nbsp;|&nbsp; RRB Nursing &nbsp;|&nbsp; ESIC &nbsp;|&nbsp; BSF
+                    &nbsp;|&nbsp; MNS</p>
+                <p class="hero-features">Online and Offline Classes &bull; Study Materials &bull; Mock Tests &bull;
+                    Previous Papers</p>
+                <a href="../start/reg.html" class="hero-cta">Start Preparation</a>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-icon" aria-hidden="true">⭐</span>
+                        <span class="hero-stat-text"><strong>10,000+</strong> Students</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-icon" aria-hidden="true">📝</span>
+                        <span class="hero-stat-text"><strong>5,000+</strong> Questions</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-icon" aria-hidden="true">📚</span>
+                        <span class="hero-stat-text"><strong>200+</strong> Materials</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right — Image Placeholder -->
+            <div class="hero-image">
+                <img src="../../images/home_page.png" alt="Nursing students preparing for exams" class="hero-image-img">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+         COURSES SECTION
+         Six-card responsive grid — Desktop: 3 cols | Tablet: 2 cols | Mobile: 1 col
+         Each card is fully clickable and redirects to the respective course page.
+         ============================================================ -->
+    <section class="courses-section" id="courses" aria-label="Explore Our Nursing Courses">
+        <div class="courses-inner">
+
+            <!-- ── Section Heading ───────────────────────────────────── -->
+            <div class="courses-header">
+                <h2 class="courses-title">Explore Our Nursing Courses</h2>
+                <p class="courses-subtitle">Expert-curated programmes designed to help you crack government
+                    nursing exams with confidence and clarity.</p>
+            </div>
+
+            <!-- ── Card Grid ─────────────────────────────────────────── -->
+            <div class="courses-grid">
+
+                <!-- ─────────────────────────── Card 1 : NORCET ── -->
+                <article class="course-card">
+                    <a href="../courses/norcet.html" class="course-card-link"
+                        aria-label="Explore NORCET Course">
+
+                        <!-- Banner -->
+                        <div class="course-card-img course-img--norcet" aria-hidden="true">
+                            <span class="course-img-abbr">NORCET</span>
+                            <!-- Medical cross icon -->
+                            <svg class="course-img-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                                <rect x="26" y="10" width="12" height="44" rx="5"
+                                    fill="rgba(255,255,255,0.85)" />
+                                <rect x="10" y="26" width="44" height="12" rx="5"
+                                    fill="rgba(255,255,255,0.85)" />
+                            </svg>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="course-card-body">
+                            <h3 class="course-card-title">NORCET Course</h3>
+                            <p class="course-card-desc">AIIMS NORCET exam prep with structured modules,
+                                full-length mock tests, and expert faculty guidance.</p>
+                            <div class="course-card-info">
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                    12,000+ Students
+                                </span>
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    6 Months
+                                </span>
+                            </div>
+                            <span class="course-card-btn">Explore Course</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ─────────────────────────── Card 2 : RRB Nursing ── -->
+                <article class="course-card">
+                    <a href="../courses/rrb-nursing.html" class="course-card-link"
+                        aria-label="Explore RRB Nursing Course">
+
+                        <div class="course-card-img course-img--rrb" aria-hidden="true">
+                            <span class="course-img-abbr">RRB</span>
+                            <!-- Train icon -->
+                            <svg class="course-img-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.90)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="14" y="10" width="36" height="32" rx="6" />
+                                <line x1="14" y1="26" x2="50" y2="26" />
+                                <circle cx="22" cy="48" r="5" />
+                                <circle cx="42" cy="48" r="5" />
+                                <line x1="22" y1="42" x2="22" y2="48" />
+                                <line x1="42" y1="42" x2="42" y2="48" />
+                                <line x1="8" y1="54" x2="56" y2="54" />
+                            </svg>
+                        </div>
+
+                        <div class="course-card-body">
+                            <h3 class="course-card-title">RRB Nursing</h3>
+                            <p class="course-card-desc">Railway Recruitment Board nursing exam preparation
+                                with topic-wise tests, previous papers, and live sessions.</p>
+                            <div class="course-card-info">
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                    8,500+ Students
+                                </span>
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    4 Months
+                                </span>
+                            </div>
+                            <span class="course-card-btn">Explore Course</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ─────────────────────────── Card 3 : ESIC Nursing ── -->
+                <article class="course-card">
+                    <a href="../courses/esic-nursing.html" class="course-card-link"
+                        aria-label="Explore ESIC Nursing Course">
+
+                        <div class="course-card-img course-img--esic" aria-hidden="true">
+                            <span class="course-img-abbr">ESIC</span>
+                            <!-- Building icon -->
+                            <svg class="course-img-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.90)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="12" y="20" width="40" height="34" rx="2" />
+                                <path d="M20 20 V14 h24 v6" />
+                                <rect x="20" y="30" width="8" height="8" />
+                                <rect x="36" y="30" width="8" height="8" />
+                                <rect x="26" y="42" width="12" height="12" />
+                                <line x1="8" y1="54" x2="56" y2="54" />
+                            </svg>
+                        </div>
+
+                        <div class="course-card-body">
+                            <h3 class="course-card-title">ESIC Nursing</h3>
+                            <p class="course-card-desc">Employees' State Insurance Corporation nursing
+                                exam course with detailed study materials and practice sets.</p>
+                            <div class="course-card-info">
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                    6,200+ Students
+                                </span>
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    5 Months
+                                </span>
+                            </div>
+                            <span class="course-card-btn">Explore Course</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ─────────────────────────── Card 4 : BSF Nursing ── -->
+                <article class="course-card">
+                    <a href="../courses/bsf-nursing.html" class="course-card-link"
+                        aria-label="Explore BSF Nursing Course">
+
+                        <div class="course-card-img course-img--bsf" aria-hidden="true">
+                            <span class="course-img-abbr">BSF</span>
+                            <!-- Shield icon -->
+                            <svg class="course-img-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.90)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path d="M32 8 L52 16 V30 C52 44 42 54 32 58 C22 54 12 44 12 30 V16 Z" />
+                                <polyline points="24,32 30,38 40,26" />
+                            </svg>
+                        </div>
+
+                        <div class="course-card-body">
+                            <h3 class="course-card-title">BSF Nursing</h3>
+                            <p class="course-card-desc">Border Security Force nursing assistant exam prep
+                                covering all topics with dedicated doubt-clearing sessions.</p>
+                            <div class="course-card-info">
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                    4,800+ Students
+                                </span>
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    3 Months
+                                </span>
+                            </div>
+                            <span class="course-card-btn">Explore Course</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ─────────────────────────── Card 5 : MNS Course ── -->
+                <article class="course-card">
+                    <a href="../courses/mns-course.html" class="course-card-link"
+                        aria-label="Explore MNS Course">
+
+                        <div class="course-card-img course-img--mns" aria-hidden="true">
+                            <span class="course-img-abbr">MNS</span>
+                            <!-- Star / military icon -->
+                            <svg class="course-img-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.90)" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <polygon
+                                    points="32,8 38,24 56,24 42,34 48,52 32,42 16,52 22,34 8,24 26,24" />
+                            </svg>
+                        </div>
+
+                        <div class="course-card-body">
+                            <h3 class="course-card-title">MNS Course</h3>
+                            <p class="course-card-desc">Military Nursing Service exam preparation with
+                                comprehensive subject coverage and interview readiness tips.</p>
+                            <div class="course-card-info">
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                    3,600+ Students
+                                </span>
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    4 Months
+                                </span>
+                            </div>
+                            <span class="course-card-btn">Explore Course</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ─────────────────────────── Card 6 : All Nursing Exams ── -->
+                <article class="course-card">
+                    <a href="../courses/all-nursing-exams.html" class="course-card-link"
+                        aria-label="Explore All Nursing Exams Course">
+
+                        <div class="course-card-img course-img--all" aria-hidden="true">
+                            <span class="course-img-abbr">ALL</span>
+                            <!-- Books / stack icon -->
+                            <svg class="course-img-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.90)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="10" y="14" width="20" height="36" rx="2" />
+                                <rect x="34" y="14" width="20" height="36" rx="2" />
+                                <line x1="10" y1="22" x2="30" y2="22" />
+                                <line x1="34" y1="22" x2="54" y2="22" />
+                                <line x1="22" y1="50" x2="22" y2="56" />
+                                <line x1="42" y1="50" x2="42" y2="56" />
+                                <line x1="8" y1="56" x2="56" y2="56" />
+                            </svg>
+                        </div>
+
+                        <div class="course-card-body">
+                            <h3 class="course-card-title">All Nursing Exams</h3>
+                            <p class="course-card-desc">One mega bundle covering NORCET, RRB, ESIC, BSF
+                                and MNS — ideal for aspirants targeting multiple exams at once.</p>
+                            <div class="course-card-info">
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                    15,000+ Students
+                                </span>
+                                <span class="course-info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    12 Months
+                                </span>
+                            </div>
+                            <span class="course-card-btn">Explore Course</span>
+                        </div>
+
+                    </a>
+                </article>
+
+            </div><!-- /.courses-grid -->
+        </div><!-- /.courses-inner -->
+    </section><!-- /#courses -->
+
+    <!-- ============================================================
+         STUDY RESOURCES SECTION
+         Six-card responsive grid — Desktop: 3 cols | Tablet: 2 cols | Mobile: 1 col
+         ============================================================ -->
+    <section class="resources-section" id="resources"
+        aria-label="Everything You Need to Crack Nursing Exams">
+        <div class="resources-inner">
+
+            <!-- ── Section Heading ───────────────────────────────── -->
+            <div class="resources-header">
+                <h2 class="resources-title">
+                    Everything You Need to<br>
+                    <span class="resources-title-accent">Crack Nursing Exams</span>
+                </h2>
+                <p class="resources-subtitle">Access expert-crafted study materials, previous papers,
+                    video lessons, and more — all in one place.</p>
+            </div>
+
+            <!-- ── Resource Cards Grid ───────────────────────────── -->
+            <div class="resources-grid">
+
+                <!-- ─────────────────── Card 1 : Study Materials ── -->
+                <article class="resource-card">
+                    <a href="../resources/study-materials.html" class="resource-card-link"
+                        aria-label="View Study Materials">
+
+                        <!-- Icon Banner -->
+                        <div class="resource-card-icon res-icon--materials" aria-hidden="true">
+                            <!-- Book-open icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+                                fill="none" stroke="rgba(255,255,255,0.92)"
+                                stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" class="resource-svg"
+                                aria-hidden="true">
+                                <path d="M10 14 C10 14 20 10 32 14 C44 10 54 14 54 14 V52 C54 52 44 48 32 52 C20 48 10 52 10 52 Z" />
+                                <line x1="32" y1="14" x2="32" y2="52" />
+                                <line x1="18" y1="20" x2="30" y2="23" />
+                                <line x1="18" y1="30" x2="30" y2="33" />
+                                <line x1="18" y1="40" x2="30" y2="43" />
+                            </svg>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="resource-card-body">
+                            <h3 class="resource-card-title">Study Materials</h3>
+                            <ul class="resource-card-list">
+                                <li>Well-structured, exam-focused notes</li>
+                                <li>PDF downloads for offline study</li>
+                                <li>Topic-wise content for all exams</li>
+                            </ul>
+                            <span class="resource-card-btn">View Materials</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ──────────────── Card 2 : Previous Year Papers ── -->
+                <article class="resource-card">
+                    <a href="../resources/previous-papers.html" class="resource-card-link"
+                        aria-label="View Previous Year Papers">
+
+                        <div class="resource-card-icon res-icon--papers" aria-hidden="true">
+                            <!-- File-text icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+                                fill="none" stroke="rgba(255,255,255,0.92)"
+                                stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" class="resource-svg"
+                                aria-hidden="true">
+                                <path d="M16 8 H40 L52 20 V56 H16 Z" />
+                                <polyline points="40,8 40,20 52,20" />
+                                <line x1="24" y1="32" x2="44" y2="32" />
+                                <line x1="24" y1="40" x2="44" y2="40" />
+                                <line x1="24" y1="48" x2="36" y2="48" />
+                            </svg>
+                        </div>
+
+                        <div class="resource-card-body">
+                            <h3 class="resource-card-title">Previous Year Papers</h3>
+                            <ul class="resource-card-list">
+                                <li>AIIMS, ESIC, RRB & more archives</li>
+                                <li>With detailed answer explanations</li>
+                                <li>Trend analysis for each exam</li>
+                            </ul>
+                            <span class="resource-card-btn">View Papers</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ─────────────────── Card 3 : Practice Quizzes ── -->
+                <article class="resource-card">
+                    <a href="../resources/practice-quizzes.html" class="resource-card-link"
+                        aria-label="Start Practice Quizzes">
+
+                        <div class="resource-card-icon res-icon--quizzes" aria-hidden="true">
+                            <!-- Check-circle / quiz icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+                                fill="none" stroke="rgba(255,255,255,0.92)"
+                                stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" class="resource-svg"
+                                aria-hidden="true">
+                                <circle cx="32" cy="32" r="22" />
+                                <polyline points="22,32 29,39 42,26" />
+                            </svg>
+                        </div>
+
+                        <div class="resource-card-body">
+                            <h3 class="resource-card-title">Practice Quizzes</h3>
+                            <ul class="resource-card-list">
+                                <li>5,000+ subject-wise MCQs</li>
+                                <li>Instant score & detailed feedback</li>
+                                <li>Timed mock test simulations</li>
+                            </ul>
+                            <span class="resource-card-btn">Start Quiz</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ─────────────────── Card 4 : Video Lectures ── -->
+                <article class="resource-card">
+                    <a href="../resources/video-lectures.html" class="resource-card-link"
+                        aria-label="Watch Video Lectures">
+
+                        <div class="resource-card-icon res-icon--videos" aria-hidden="true">
+                            <!-- Play / video icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+                                fill="none" stroke="rgba(255,255,255,0.92)"
+                                stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" class="resource-svg"
+                                aria-hidden="true">
+                                <rect x="8" y="14" width="48" height="34" rx="5" />
+                                <polygon points="26,24 26,40 42,32"
+                                    fill="rgba(255,255,255,0.75)" stroke="none" />
+                                <line x1="18" y1="54" x2="46" y2="54" />
+                                <line x1="32" y1="48" x2="32" y2="54" />
+                            </svg>
+                        </div>
+
+                        <div class="resource-card-body">
+                            <h3 class="resource-card-title">Video Lectures</h3>
+                            <ul class="resource-card-list">
+                                <li>HD concept-clearing video lessons</li>
+                                <li>Expert faculty from top institutes</li>
+                                <li>Downloadable for offline viewing</li>
+                            </ul>
+                            <span class="resource-card-btn">Watch Now</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ──────────────── Card 5 : Exam Strategy Guides ── -->
+                <article class="resource-card">
+                    <a href="../resources/exam-strategy.html" class="resource-card-link"
+                        aria-label="Read Exam Strategy Guides">
+
+                        <div class="resource-card-icon res-icon--strategy" aria-hidden="true">
+                            <!-- Target / strategy icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+                                fill="none" stroke="rgba(255,255,255,0.92)"
+                                stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" class="resource-svg"
+                                aria-hidden="true">
+                                <circle cx="32" cy="32" r="22" />
+                                <circle cx="32" cy="32" r="13" />
+                                <circle cx="32" cy="32" r="4"
+                                    fill="rgba(255,255,255,0.80)" stroke="none" />
+                                <line x1="32" y1="10" x2="32" y2="6" />
+                                <line x1="54" y1="32" x2="58" y2="32" />
+                            </svg>
+                        </div>
+
+                        <div class="resource-card-body">
+                            <h3 class="resource-card-title">Exam Strategy Guides</h3>
+                            <ul class="resource-card-list">
+                                <li>Proven exam-day strategies</li>
+                                <li>Time-management techniques</li>
+                                <li>Weak-area identification tools</li>
+                            </ul>
+                            <span class="resource-card-btn">Read Guides</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ──────────────── Card 6 : Quick Revision Notes ── -->
+                <article class="resource-card">
+                    <a href="../resources/revision-notes.html" class="resource-card-link"
+                        aria-label="Access Quick Revision Notes">
+
+                        <div class="resource-card-icon res-icon--revision" aria-hidden="true">
+                            <!-- Lightning / revision icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+                                fill="none" stroke="rgba(255,255,255,0.92)"
+                                stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" class="resource-svg"
+                                aria-hidden="true">
+                                <polygon points="36,8 20,34 31,34 28,56 44,30 33,30"
+                                    fill="rgba(255,255,255,0.75)" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <div class="resource-card-body">
+                            <h3 class="resource-card-title">Quick Revision Notes</h3>
+                            <ul class="resource-card-list">
+                                <li>Concise last-minute summaries</li>
+                                <li>High-yield topics highlighted</li>
+                                <li>Memory aids & mnemonics</li>
+                            </ul>
+                            <span class="resource-card-btn">Revise Now</span>
+                        </div>
+
+                    </a>
+                </article>
+
+            </div><!-- /.resources-grid -->
+        </div><!-- /.resources-inner -->
+    </section><!-- /#resources -->
+
+    <!-- ============================================================
+         MOCK TESTS SECTION
+         Six-card responsive grid — Desktop: 3 cols | Tablet: 2 cols | Mobile: 1 col
+         Each card links to the respective test page.
+         ============================================================ -->
+    <section class="mock-section" id="mock-tests"
+        aria-label="Practice with Real Exam Mock Tests">
+        <div class="mock-inner">
+
+            <!-- ── Section Heading ────────────────────────────────── -->
+            <div class="mock-header">
+                <h2 class="mock-title">
+                    Test Your Preparation with
+                    <span class="mock-title-accent">Real Exam Mock Tests</span>
+                </h2>
+                <p class="mock-subtitle">Simulate actual exam conditions with timed, full-length tests
+                    designed by subject-matter experts.</p>
+            </div>
+
+            <!-- ── Mock Test Cards Grid ───────────────────────────── -->
+            <div class="mock-grid">
+
+                <!-- ───────────────────────── Card 1 : NORCET ── -->
+                <article class="mock-card">
+                    <a href="../tests/norcet-mock.html" class="mock-card-link"
+                        aria-label="Start NORCET Mock Test">
+
+                        <!-- Colour stripe + exam badge -->
+                        <div class="mock-card-stripe mock-stripe--norcet" aria-hidden="true">
+                            <span class="mock-badge">NORCET</span>
+                            <!-- clipboard / test icon -->
+                            <svg class="mock-stripe-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.88)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="16" y="10" width="32" height="44" rx="4" />
+                                <path d="M24 10 v-4 h16 v4" />
+                                <line x1="24" y1="28" x2="40" y2="28" />
+                                <line x1="24" y1="36" x2="40" y2="36" />
+                                <line x1="24" y1="44" x2="34" y2="44" />
+                            </svg>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="mock-card-body">
+                            <h3 class="mock-card-title">NORCET Mock Test</h3>
+                            <p class="mock-card-meta">
+                                <span class="mock-meta-item">
+                                    <!-- question icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                    100 Questions
+                                </span>
+                                <span class="mock-meta-dot" aria-hidden="true">•</span>
+                                <span class="mock-meta-item">
+                                    <!-- clock icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    90 Minutes
+                                </span>
+                            </p>
+                            <span class="mock-card-btn">Start Test</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ────────────────────────── Card 2 : RRB ── -->
+                <article class="mock-card">
+                    <a href="../tests/rrb-mock.html" class="mock-card-link"
+                        aria-label="Start RRB Mock Test">
+
+                        <div class="mock-card-stripe mock-stripe--rrb" aria-hidden="true">
+                            <span class="mock-badge">RRB</span>
+                            <svg class="mock-stripe-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.88)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="16" y="10" width="32" height="44" rx="4" />
+                                <path d="M24 10 v-4 h16 v4" />
+                                <line x1="24" y1="28" x2="40" y2="28" />
+                                <line x1="24" y1="36" x2="40" y2="36" />
+                                <line x1="24" y1="44" x2="34" y2="44" />
+                            </svg>
+                        </div>
+
+                        <div class="mock-card-body">
+                            <h3 class="mock-card-title">RRB Mock Test</h3>
+                            <p class="mock-card-meta">
+                                <span class="mock-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                    120 Questions
+                                </span>
+                                <span class="mock-meta-dot" aria-hidden="true">•</span>
+                                <span class="mock-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    90 Minutes
+                                </span>
+                            </p>
+                            <span class="mock-card-btn">Start Test</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ────────────────────────── Card 3 : ESIC ── -->
+                <article class="mock-card">
+                    <a href="../tests/esic-mock.html" class="mock-card-link"
+                        aria-label="Start ESIC Mock Test">
+
+                        <div class="mock-card-stripe mock-stripe--esic" aria-hidden="true">
+                            <span class="mock-badge">ESIC</span>
+                            <svg class="mock-stripe-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.88)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="16" y="10" width="32" height="44" rx="4" />
+                                <path d="M24 10 v-4 h16 v4" />
+                                <line x1="24" y1="28" x2="40" y2="28" />
+                                <line x1="24" y1="36" x2="40" y2="36" />
+                                <line x1="24" y1="44" x2="34" y2="44" />
+                            </svg>
+                        </div>
+
+                        <div class="mock-card-body">
+                            <h3 class="mock-card-title">ESIC Mock Test</h3>
+                            <p class="mock-card-meta">
+                                <span class="mock-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                    100 Questions
+                                </span>
+                                <span class="mock-meta-dot" aria-hidden="true">•</span>
+                                <span class="mock-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    75 Minutes
+                                </span>
+                            </p>
+                            <span class="mock-card-btn">Start Test</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ────────────────────────── Card 4 : BSF ── -->
+                <article class="mock-card">
+                    <a href="../tests/bsf-mock.html" class="mock-card-link"
+                        aria-label="Start BSF Nursing Mock Test">
+
+                        <div class="mock-card-stripe mock-stripe--bsf" aria-hidden="true">
+                            <span class="mock-badge">BSF</span>
+                            <svg class="mock-stripe-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.88)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="16" y="10" width="32" height="44" rx="4" />
+                                <path d="M24 10 v-4 h16 v4" />
+                                <line x1="24" y1="28" x2="40" y2="28" />
+                                <line x1="24" y1="36" x2="40" y2="36" />
+                                <line x1="24" y1="44" x2="34" y2="44" />
+                            </svg>
+                        </div>
+
+                        <div class="mock-card-body">
+                            <h3 class="mock-card-title">BSF Nursing Mock Test</h3>
+                            <p class="mock-card-meta">
+                                <span class="mock-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                    80 Questions
+                                </span>
+                                <span class="mock-meta-dot" aria-hidden="true">•</span>
+                                <span class="mock-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    60 Minutes
+                                </span>
+                            </p>
+                            <span class="mock-card-btn">Start Test</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ────────────────────────── Card 5 : MNS ── -->
+                <article class="mock-card">
+                    <a href="../tests/mns-mock.html" class="mock-card-link"
+                        aria-label="Start MNS Mock Test">
+
+                        <div class="mock-card-stripe mock-stripe--mns" aria-hidden="true">
+                            <span class="mock-badge">MNS</span>
+                            <svg class="mock-stripe-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.88)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="16" y="10" width="32" height="44" rx="4" />
+                                <path d="M24 10 v-4 h16 v4" />
+                                <line x1="24" y1="28" x2="40" y2="28" />
+                                <line x1="24" y1="36" x2="40" y2="36" />
+                                <line x1="24" y1="44" x2="34" y2="44" />
+                            </svg>
+                        </div>
+
+                        <div class="mock-card-body">
+                            <h3 class="mock-card-title">MNS Mock Test</h3>
+                            <p class="mock-card-meta">
+                                <span class="mock-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                    100 Questions
+                                </span>
+                                <span class="mock-meta-dot" aria-hidden="true">•</span>
+                                <span class="mock-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    90 Minutes
+                                </span>
+                            </p>
+                            <span class="mock-card-btn">Start Test</span>
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- ──────────────── Card 6 : General Nursing ── -->
+                <article class="mock-card">
+                    <a href="../tests/general-nursing-mock.html" class="mock-card-link"
+                        aria-label="Start General Nursing Practice Test">
+
+                        <div class="mock-card-stripe mock-stripe--general" aria-hidden="true">
+                            <span class="mock-badge">GNP</span>
+                            <svg class="mock-stripe-icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64" fill="none"
+                                stroke="rgba(255,255,255,0.88)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="16" y="10" width="32" height="44" rx="4" />
+                                <path d="M24 10 v-4 h16 v4" />
+                                <line x1="24" y1="28" x2="40" y2="28" />
+                                <line x1="24" y1="36" x2="40" y2="36" />
+                                <line x1="24" y1="44" x2="34" y2="44" />
+                            </svg>
+                        </div>
+
+                        <div class="mock-card-body">
+                            <h3 class="mock-card-title">General Nursing Practice Test</h3>
+                            <p class="mock-card-meta">
+                                <span class="mock-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                    150 Questions
+                                </span>
+                                <span class="mock-meta-dot" aria-hidden="true">•</span>
+                                <span class="mock-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    120 Minutes
+                                </span>
+                            </p>
+                            <span class="mock-card-btn">Start Test</span>
+                        </div>
+
+                    </a>
+                </article>
+
+            </div><!-- /.mock-grid -->
+        </div><!-- /.mock-inner -->
+    </section><!-- /#mock-tests -->
+
+    <!-- ============================================================
+         WHY CHOOSE US SECTION
+         Trust-building feature grid — Desktop: 4 cols | Tablet: 2 cols | Mobile: 1 col
+         ============================================================ -->
+    <section class="why-section" id="why-us"
+        aria-label="Why Thousands of Nursing Aspirants Choose Us">
+        <div class="why-inner">
+
+            <!-- ── Section Heading ────────────────────────────────── -->
+            <div class="why-header">
+                <span class="why-eyebrow">Why Choose Us</span>
+                <h2 class="why-title">
+                    Why Thousands of Nursing Aspirants
+                    <span class="why-title-accent">Trust Us</span>
+                </h2>
+                <p class="why-subtitle">Everything you need to ace your nursing exam — in one
+                    focused, student-first platform built by experts.</p>
+            </div>
+
+            <!-- ── Feature Cards Grid ────────────────────────────── -->
+            <div class="why-grid">
+
+                <!-- Card 1 -->
+                <div class="why-card">
+                    <div class="why-card-icon" aria-hidden="true">🎯</div>
+                    <h3 class="why-card-title">Exam-Focused Courses</h3>
+                    <p class="why-card-desc">Courses designed strictly around real nursing exam
+                        patterns — nothing irrelevant, nothing missed.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="why-card">
+                    <div class="why-card-icon" aria-hidden="true">📚</div>
+                    <h3 class="why-card-title">Updated Study Materials</h3>
+                    <p class="why-card-desc">Latest syllabus-based notes, PDFs, and topic-wise
+                        resources updated every exam cycle.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="why-card">
+                    <div class="why-card-icon" aria-hidden="true">🧠</div>
+                    <h3 class="why-card-title">Real Exam Mock Tests</h3>
+                    <p class="why-card-desc">Practice with full-length tests that simulate the
+                        actual exam — timing, difficulty, and format.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="why-card">
+                    <div class="why-card-icon" aria-hidden="true">👨‍🏫</div>
+                    <h3 class="why-card-title">Expert Guidance</h3>
+                    <p class="why-card-desc">Learn from experienced mentors and verified
+                        nursing exam specialists with proven results.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="why-card">
+                    <div class="why-card-icon" aria-hidden="true">⏱️</div>
+                    <h3 class="why-card-title">Smart Time Management</h3>
+                    <p class="why-card-desc">Timed drills and smart practice sessions designed
+                        to sharpen speed and accuracy under pressure.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="why-card">
+                    <div class="why-card-icon" aria-hidden="true">📊</div>
+                    <h3 class="why-card-title">Track Your Progress</h3>
+                    <p class="why-card-desc">Detailed performance analytics show your strengths,
+                        weak areas, and improvement over time.</p>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="why-card">
+                    <div class="why-card-icon" aria-hidden="true">📱</div>
+                    <h3 class="why-card-title">Learn Anytime, Anywhere</h3>
+                    <p class="why-card-desc">Fully mobile-friendly platform — study on the go
+                        from any device, online or offline.</p>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="why-card">
+                    <div class="why-card-icon" aria-hidden="true">🏆</div>
+                    <h3 class="why-card-title">Proven Success Rate</h3>
+                    <p class="why-card-desc">10,000+ students cleared government nursing exams
+                        with our structured preparation system.</p>
+                </div>
+
+            </div><!-- /.why-grid -->
+
+            <!-- ── Bottom Stats Banner ────────────────────────────── -->
+            <div class="why-stats" role="list">
+                <div class="why-stat" role="listitem">
+                    <span class="why-stat-number">10,000<span class="why-stat-plus">+</span></span>
+                    <span class="why-stat-label">Students Enrolled</span>
+                </div>
+                <div class="why-stat-divider" aria-hidden="true"></div>
+                <div class="why-stat" role="listitem">
+                    <span class="why-stat-number">5,000<span class="why-stat-plus">+</span></span>
+                    <span class="why-stat-label">Practice Questions</span>
+                </div>
+                <div class="why-stat-divider" aria-hidden="true"></div>
+                <div class="why-stat" role="listitem">
+                    <span class="why-stat-number">200<span class="why-stat-plus">+</span></span>
+                    <span class="why-stat-label">Study Materials</span>
+                </div>
+                <div class="why-stat-divider" aria-hidden="true"></div>
+                <div class="why-stat" role="listitem">
+                    <span class="why-stat-number">98<span class="why-stat-plus">%</span></span>
+                    <span class="why-stat-label">Student Satisfaction</span>
+                </div>
+            </div><!-- /.why-stats -->
+
+        </div><!-- /.why-inner -->
+    </section><!-- /#why-us -->
+
+    <!-- ============================================================
+         PLATFORM STATS SECTION
+         Four counters in a row — animated count-up on scroll into view
+         ============================================================ -->
+    <section class="stats-section" id="platform-stats"
+        aria-label="Our Impact in Numbers">
+        <div class="stats-inner">
+
+            <!-- ── Background decorative circles (pure CSS) ── -->
+            <span class="stats-deco stats-deco--1" aria-hidden="true"></span>
+            <span class="stats-deco stats-deco--2" aria-hidden="true"></span>
+
+            <!-- ── Heading ─────────────────────────────────── -->
+            <div class="stats-header">
+                <span class="stats-eyebrow">Our Impact</span>
+                <h2 class="stats-title">Trusted by Thousands of
+                    <span class="stats-title-accent">Nursing Aspirants</span>
+                </h2>
+                <p class="stats-subtitle">Numbers that reflect our commitment to every student's
+                    success in government nursing exams.</p>
+            </div>
+
+            <!-- ── Counter cards ───────────────────────────── -->
+            <div class="stats-grid">
+
+                <!-- Stat 1 -->
+                <div class="stat-card">
+                    <div class="stat-card-icon" aria-hidden="true">🎓</div>
+                    <div class="stat-card-body">
+                        <span class="stat-number" data-target="10000"
+                            aria-label="10,000 plus">10,000<span class="stat-plus">+</span></span>
+                        <span class="stat-label">Students Enrolled</span>
+                        <span class="stat-desc">Nursing aspirants actively preparing on our
+                            platform.</span>
+                    </div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="stat-card">
+                    <div class="stat-card-icon" aria-hidden="true">❓</div>
+                    <div class="stat-card-body">
+                        <span class="stat-number" data-target="5000"
+                            aria-label="5,000 plus">5,000<span class="stat-plus">+</span></span>
+                        <span class="stat-label">Practice Questions</span>
+                        <span class="stat-desc">Extensive MCQs covering every nursing exam
+                            topic.</span>
+                    </div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="stat-card">
+                    <div class="stat-card-icon" aria-hidden="true">📚</div>
+                    <div class="stat-card-body">
+                        <span class="stat-number" data-target="200"
+                            aria-label="200 plus">200<span class="stat-plus">+</span></span>
+                        <span class="stat-label">Study Materials</span>
+                        <span class="stat-desc">Syllabus-based notes, PDFs, and topic-wise
+                            guides.</span>
+                    </div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="stat-card">
+                    <div class="stat-card-icon" aria-hidden="true">📝</div>
+                    <div class="stat-card-body">
+                        <span class="stat-number" data-target="50"
+                            aria-label="50 plus">50<span class="stat-plus">+</span></span>
+                        <span class="stat-label">Mock Tests</span>
+                        <span class="stat-desc">Real exam-style full-length tests to boost your
+                            confidence.</span>
+                    </div>
+                </div>
+
+            </div><!-- /.stats-grid -->
+        </div><!-- /.stats-inner -->
+    </section><!-- /#platform-stats -->
+
+    <!-- ============================================================
+         FOOTER
+         Demo links and company information
+         ============================================================ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-inner">
+            
+            <!-- Footer Links Grid -->
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-heading">Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="../courses/norcet.html">NORCET Exam</a></li>
+                        <li><a href="../courses/rrb-nursing.html">RRB Nursing</a></li>
+                        <li><a href="../courses/esic-nursing.html">ESIC Nursing</a></li>
+                        <li><a href="../courses/bsf-nursing.html">BSF Nursing</a></li>
+                        <li><a href="../courses/mns.html">MNS Exam</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#courses">All Courses</a></li>
+                        <li><a href="home.html">Study Materials</a></li>
+                        <li><a href="home.html">Mock Tests</a></li>
+                        <li><a href="home.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.html">About Us</a></li>
+                        <li><a href="home.html">Contact</a></li>
+                        <li><a href="home.html">FAQ</a></li>
+                        <li><a href="home.html">Terms of Service</a></li>
+                        <li><a href="home.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-heading">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Career</a></li>
+                        <li><a href="home.html">Partners</a></li>
+                        <li><a href="home.html">Get App</a></li>
+                        <li><a href="home.html">Affiliate</a></li>
+                        <li><a href="home.html">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 Spark Nurses Academy. All rights reserved.</p>
+                <p class="footer-tagline">Preparing you for success in nursing exams.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== JavaScript (external) ====== -->
+    <script src="../../js/home/home.js"></script>
+
+</body>
+
+</html>
